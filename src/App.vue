@@ -1,26 +1,32 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <app-header></app-header>
     <router-view/>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import AppFooter from './components/AppFooter.vue'
+import AppHeader from './components/AppHeader.vue'
 export default {
+  components: { AppHeader, AppFooter },
   name: 'App'
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  color: #37474f;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  img{
-    width: 20%;
-  }
+  margin: 0 auto;
+  padding: 0;
+}
+.container {
+  padding-bottom: 4rem;
 }
 </style>
