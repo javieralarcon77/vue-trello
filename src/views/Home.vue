@@ -64,7 +64,7 @@ export default {
     font-size: 1.1rem;
     outline: 0;
     padding: 0.5rem;
-    transition: all 600ms ease;
+    transition: all 200ms ease;
 
     &:focus,
     &:active{

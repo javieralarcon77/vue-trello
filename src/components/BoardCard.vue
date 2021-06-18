@@ -30,7 +30,7 @@ export default {
     padding: 1rem;
     text-align: left;
     text-decoration: none;
-    transition: all 600ms ease;
+    transition: all 200ms ease;
     width: 100%;
     height: 100px;
 
