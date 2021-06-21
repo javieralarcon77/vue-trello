@@ -3,16 +3,30 @@
     <header>
       <h3>{{ name }}</h3>
     </header>
-    <div>...</div>
+    <task-list
+      :listId="listId"
+      :tasks="tasksList"
+    ></task-list>
   </section>
 </template>
 
 <script>
+import TaskList from './TaskList'
+
 export default {
   name: 'column',
+  components: { TaskList },
   props: {
     listId: String,
     name: String
+  },
+  data () {
+    return {
+      tasksList: [
+        { id: '1', title: 'Aprender Vue', completed: false },
+        { id: '2', title: 'Aprender Vuex', completed: false }
+      ]
+    }
   }
 }
 </script>
@@ -27,6 +41,7 @@ export default {
     margin: 1rem;
     padding: 1rem;
     width: 95%;
+    float: left;
 
     @media screen and (min-width: 600px) {
       width: calc(50% - 2rem - 2px);
